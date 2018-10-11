@@ -1,0 +1,10 @@
+[Unit]
+Description=Tracks Pi stats for influx
+
+[Service]
+ExecStart=/usr/bin/pi-stats.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=influxd.service
